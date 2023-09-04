@@ -112,9 +112,9 @@ Building inspection clipboard:
 # Setting up tasks
 ## Installing packages
 **To do:**
-1. install bootstrap by `npm install bootstrap@5.3.1`
-2. create `custom.scss` and `custom.css` file in assets/stylesheets folder
-3. add the ff. to the custom.scss file
+1. <s>install bootstrap by `npm install bootstrap@5.3.1`</s>
+2. <s>create `custom.scss` and `custom.css` file in assets/stylesheets folder</s>
+3. <s>add the ff. to the custom.scss file</s>
 ```
 @charset "utf-8";
 @import "../../../node_modules/bootstrap/scss/bootstrap.scss";
@@ -139,8 +139,8 @@ html{
 }
 ```
 
-3. compile the `custom.scss` to `custom.css` using `sass --watch custom.scss:custom.css`
-4. add the js path to the src attribute of script tag and `custom.css` path to the src attribute of link tag in `index.html` file of svelte app
+3. <s>compile the `custom.scss` to `custom.css` using `sass --watch custom.scss:custom.css`</s>
+4. <s>add the `.js` file path to the src attribute of script tag and `custom.css` path to the src attribute of link tag in `index.html` file of svelte app</s>
 ```
 ...
 <link rel="stylesheet" href="./src/assets/stylesheets/custom.css">
@@ -197,3 +197,5 @@ html{
 11. additionally we can choose `ESLint` for code linting for last decision
 12. run `npm run dev` in base directory
 
+
+#
