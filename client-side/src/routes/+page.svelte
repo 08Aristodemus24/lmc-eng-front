@@ -1,2 +1,3 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to dasfdread the documentation</p>
+<h1>
+    We innovate. We optimize. These are the driving forces behind LMC as your engineering front for planning, designing, and ensuring sustainable green city living. Founded with the passion of its founder and inspired by years of engineering practice, LMC Engineering Front (LMC-EF) carries on the vision, representing the next generation of the LMC family line in Engineering and Architecture.
+</h1>

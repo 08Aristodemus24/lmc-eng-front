@@ -198,4 +198,7 @@ html{
 12. run `npm run dev` in base directory
 
 
-#
+# Frontend tasks
+## Routing
+**To do:**
+1. instead of having all projects in home page
