@@ -254,4 +254,4 @@ for doing the latter would be a taxing thing to do. An alternative would be to u
 
 ```
 
-2.
+2. implement transition between pages
