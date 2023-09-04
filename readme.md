@@ -201,4 +201,57 @@ html{
 # Frontend tasks
 ## Routing
 **To do:**
-1. instead of having all projects in home page
+1. instead of having all projects in home page have a portion of it
+2. create new page named projects
+3. projects will contain all projects
+
+**Side notes:**
+1. catch all routes are for pages that just multiply on and on and we can't manually define them as a route in our file structure otherwise our file structure would be so big to the point it becomes hard to understand and disorganized e.g.
+
+```
+routes
+ |- about
+     |- +page.svelte
+ |- projects
+     |- [id]
+         |- [title]
+             |- +page.svelte
+         |- +page.svelte
+     |- +page.svelte
+ |- services
+     |- +page.svelte
+```
+
+is much better than:
+```
+routes
+ |- about
+     |- +page.svelte
+ |- projects
+     |- [id]
+         |- [title]
+             |- +page.svelte
+         |- +page.svelte
+     |- +page.svelte
+ |- services
+     |- mechanical
+         |- feature-1
+         |- ...
+         |- feature-20
+     |- civil
+     |- architectural
+     |- structural
+     |- electrical
+     |- plumbing
+     |- landscape-dev
+     |- site-dev
+     |- house-inspection
+     |- +page.svelte
+```
+
+for doing the latter would be a taxing thing to do. An alternative would be to use [...slug] as our parameter in a folder containing a +page.svelte file that will catch all our routes
+```
+
+```
+
+2.
