@@ -1,5 +1,7 @@
 <script>
     import { page } from "$app/stores";
+    import Navbar from "$lib/Navbar.svelte";
+
     const slug_arr = $page.params.slug;
     console.log(slug_arr);
 
@@ -13,6 +15,7 @@
     */
 </script>
 
+<Navbar brand="LMC Engineering Front"/>
 <h1>
     All our services
 </h1>

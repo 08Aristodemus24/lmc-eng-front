@@ -1,5 +1,6 @@
 <script>
     import { page } from "$app/stores";
+    import Navbar from "$lib/Navbar.svelte";
 
     /*
     $page params contains a dicitonary of all the parameters in our
@@ -12,6 +13,8 @@
     const {id: project_id} = $page.params;
 
 </script>
+
+<Navbar brand="LMC Engineering Front"/>
 <h1>
     Project {project_id}
 </h1>
