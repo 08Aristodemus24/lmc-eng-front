@@ -1,3 +1,3 @@
 <h1>
-    Our services
+    Some of our services
 </h1>
