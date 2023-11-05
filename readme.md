@@ -112,43 +112,7 @@ Building inspection clipboard:
 # Setting up tasks
 ## Installing packages
 **To do:**
-1. <s>install bootstrap by `npm install bootstrap@5.3.1`</s>
-2. <s>create `custom.scss` and `custom.css` file in assets/stylesheets folder</s>
-3. <s>add the ff. to the custom.scss file</s>
-```
-@charset "utf-8";
-@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
-// functions (mix-ins) of bootstrap
-// @import "../../../node_modules/bootstrap/scss/functions";
-
-// // required imports
-// @import "../../../node_modules/bootstrap/scss/variables";
-// @import "../../../node_modules/bootstrap/scss/variables-dark";
-// @import "../../../node_modules/bootstrap/scss/maps";
-// @import "../../../node_modules/bootstrap/scss/mixins";
-// @import "../../../node_modules/bootstrap/scss/root";
-
-// // include other parts/modules of components here as needed 
-// // if you need to customize them
-// @import "../../../node_modules/bootstrap/scss/nav";
-// @import "../../../node_modules/bootstrap/scss/navbar";
-
-
-html{
-    scroll-behavior: smooth;
-}
-```
-
-3. <s>compile the `custom.scss` to `custom.css` using `sass --watch custom.scss:custom.css`</s>
-4. <s>add the `.js` file path to the src attribute of script tag and `custom.css` path to the src attribute of link tag in `index.html` file of svelte app</s>
-```
-...
-<link rel="stylesheet" href="./src/assets/stylesheets/custom.css">
-...
-<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-...
-```
-5. create `Navbar.svelte` file to ./src/components folder
+1. create `Navbar.svelte` file to ./src/components folder
 6. add navbar code snippet from bootstrap docs to this newly created file
 ```
 <script>
