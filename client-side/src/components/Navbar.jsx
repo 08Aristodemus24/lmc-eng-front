@@ -1,5 +1,8 @@
+// import { useState } from "react";
 
 export default function Navbar(props){
+    // let [isOpened, setIsOpened] = useState(false);
+
     return (
         <header className="navbar-container">
             <nav className="navbar">
@@ -7,17 +10,7 @@ export default function Navbar(props){
                     <a className="navbar-brand" href="/">{props['brand']}</a>
                     
                     <div className="button-container">
-                        <a href="#" className="top-left-corner"></a>
-                        <a href="#" className="top-edge"></a>
-                        <a href="#" className="top-right-corner"></a>
-                        
-                        <a href="#" className="left-edge"></a>
-                        <a href="#" className="center"></a>
-                        <a href="#" className="right-edge"></a>
-                        
-                        <a href="#" className="bottom-left-corner"></a>
-                        <a href="#" className="bottom-edge"></a>
-                        <a href="#" className="bottom-right-corner"></a>
+                        <span className="bar"></span>
                     </div>
                 </div>
                 
