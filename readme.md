@@ -1,6 +1,6 @@
 # **IN PRODUCTION** 
 
-# My portfolio website for all my AI/ML projects. Built with Svelte, Vanilla CSS, Leonardo.AI, Manim and Flask
+# My portfolio website for all my AI/ML projects. Built with Next.js, Vanilla CSS, Leonardo.AI, Flask, and SQLAlchemy
 
 # Frontend
 # Initial landing section:
