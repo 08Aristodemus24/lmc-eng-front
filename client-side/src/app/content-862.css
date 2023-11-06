@@ -10,6 +10,7 @@
 
         /* design */
         mix-blend-mode: difference;
+        background-color: transparent;
 
         /* transition */
         transition: top 0.25s cubic-bezier(0.5, 0, 0, 1);

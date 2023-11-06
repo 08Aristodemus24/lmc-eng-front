@@ -1,7 +1,9 @@
 # **IN PRODUCTION** 
 
-# Initial landing section:
+# My portfolio website for all my AI/ML projects. Built with Svelte, Vanilla CSS, Leonardo.AI, Manim and Flask
 
+# Frontend
+# Initial landing section:
 We innovate. We optimize. These are the driving forces behind LMC as your engineering front for planning, designing, and ensuring sustainable green city living. Founded with the passion of its founder and inspired by years of engineering practice, LMC Engineering Front (LMC-EF) carries on the vision, representing the next generation of the LMC family line in Engineering and Architecture.
 
 # About us section:
