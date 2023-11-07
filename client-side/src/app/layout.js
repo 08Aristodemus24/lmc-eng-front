@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Navbar brand="LMC Engineering Front"/>
+        <Navbar brand="LMC-EF"/>
         <main className="main-content">
           {children}
         </main>
