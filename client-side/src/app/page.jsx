@@ -1,6 +1,4 @@
-import Image from "next/image";
-
-export default function Home() {
+function Cards(){
   const cards = Array.from({length: 6}, (_, i) => i + 1).map((value, index) => {
     return (
       <div className="img-card" key={index}>
@@ -9,7 +7,10 @@ export default function Home() {
     );
   });
 
-  console.log(cards)
+  return cards;
+}
+
+export default function Home(){
 
   return (
     <section id="landing-section">
@@ -32,7 +33,9 @@ export default function Home() {
           </p>
         </div>
         <div className="stack-container">
-          {cards}
+          <div className="landing-card">
+            <img src="/compressed/AIified stock photo (3).jpg" alt="stock-image"/>
+          </div>
         </div>
       </div>
     </section>

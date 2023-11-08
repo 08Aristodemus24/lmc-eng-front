@@ -169,6 +169,10 @@
   align-items: center;
   flex-wrap: wrap;
 
+  /* spacing */
+  margin-inline: 1rem;
+  gap: 5rem;
+
   /* size */
   width: 100%;
 
@@ -217,11 +221,11 @@
   position: relative;
 
   /* size */
-  width: clamp(20rem, 20%, 40rem);
-  height: 30rem;
+  width: clamp(20rem, 25%, 30rem);
+  height: clamp(20rem, 25vw, 40rem);
 }
 
-.img-card{
+.landing-card{
   /* position */
   position: absolute;
 
@@ -233,37 +237,7 @@
   height: 100%;
 }
 
-.img-card:nth-child(6){
-  top: 5rem;
-  right: 10rem;
-}
-
-.img-card:nth-child(5){
-  top: 4rem;
-  right: 8rem;
-}
-
-.img-card:nth-child(4){
-  top: 3rem;
-  right: 6rem;
-}
-
-.img-card:nth-child(3){
-  top: 2rem;
-  right: 4rem;
-}
-
-.img-card:nth-child(2){
-  top: 1rem;
-  right: 2rem;
-}
-
-.img-card:nth-child(1){
-  top: 0;
-  right: 0;
-}
-
-.img-card img{
+.landing-card img{
   position: absolute;
   inset: 0;
   object-fit: cover;
