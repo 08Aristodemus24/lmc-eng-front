@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 
 export default function Navbar(props){
@@ -20,10 +21,10 @@ export default function Navbar(props){
                 
                 <div className="nav-menu-container">
                     <div className="nav-menu">
-                        <a className="nav-item about-section" aria-current="page">about</a>
-                        <a className="nav-item projects-section" aria-current="page">projects</a>
-                        <a className="nav-item services-section">services</a>
-                        <a className="nav-item contact-section">contact</a>
+                        <Link href="/about" className="nav-item about-section" aria-current="page">about</Link>
+                        <Link href="/projects" className="nav-item projects-section">projects</Link>
+                        <Link href="/services" className="nav-item services-section">services</Link>
+                        <Link href="/contact" className="nav-item contact-section">contact</Link>
                     </div>
                 </div>
             </nav>

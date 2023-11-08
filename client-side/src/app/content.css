@@ -60,8 +60,8 @@
   /* design */
   color: black;
   font-size: clamp(24px, 2vw, 32px);
-  font-weight: 300;
   font-family: 'Poppins', sans-serif;
+  font-weight: 600;
   text-decoration: none;
 }
 
@@ -93,16 +93,14 @@
   padding-bottom: .5em;
 
   /* size */
-  width: 10rem;      
+  width: clamp(100px, 10vw, 10rem);
 
   /* design */
   text-align: center;
   color: black;
   font-size: clamp(12px, 1vw, 1rem);
   text-transform: capitalize;
-  font-weight: 400;
   text-decoration: none;
-  letter-spacing: 0.125em;
   cursor: pointer;
   /* outline: 3px solid lightgreen; */
 
@@ -164,6 +162,115 @@
   align-items: center;
 }
 
+.landing-content{
+  /* display */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+
+  /* size */
+  width: 100%;
+
+  /* design */
+  /* outline: 1px solid seagreen; */
+}
+
+.slogan-container h1{
+  /* spacing */
+  margin-inline: 10px;
+
+  /* design */
+  font-size: clamp(1.5rem, 3.75vw, 3.75rem);
+  text-align: left;
+
+  /* size */
+  width: fit-content;
+}
+
+.slogan-container p{
+  /* design */
+  font-weight: 200;
+  text-align: justify;
+  font-size: clamp(14px, 2.1875vw, 22.4px);
+
+  /* size */
+  width: 20em;
+}
+
+.slogan-container p:nth-child(2){
+  /* spacing */
+  margin-inline: 10px;
+  margin-block: 2.5em 1em;
+}
+
+.slogan-container p:nth-child(3){
+  /* spacing */
+  margin-inline: 10px;
+  margin-block: 0.5em 0;
+}
+
+.stack-container{
+  outline: 1px solid black;
+
+  /* position */
+  position: relative;
+
+  /* size */
+  width: clamp(20rem, 20%, 40rem);
+  height: 30rem;
+}
+
+.img-card{
+  /* position */
+  position: absolute;
+
+  /* design */
+  /* outline: 1px solid slateblue; */
+
+  /* size */
+  width: 100%;
+  height: 100%;
+}
+
+.img-card:nth-child(6){
+  top: 5rem;
+  right: 10rem;
+}
+
+.img-card:nth-child(5){
+  top: 4rem;
+  right: 8rem;
+}
+
+.img-card:nth-child(4){
+  top: 3rem;
+  right: 6rem;
+}
+
+.img-card:nth-child(3){
+  top: 2rem;
+  right: 4rem;
+}
+
+.img-card:nth-child(2){
+  top: 1rem;
+  right: 2rem;
+}
+
+.img-card:nth-child(1){
+  top: 0;
+  right: 0;
+}
+
+.img-card img{
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+
+  width: 100%;
+  height: 100%;
+}
 
 
 /* FOOTER */

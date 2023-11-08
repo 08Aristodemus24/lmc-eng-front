@@ -14,6 +14,7 @@
 
     /* design */
     font-family: 'Nunito Sans', sans-serif;
+    font-weight: 300;
 }
 
 html{
@@ -39,4 +40,10 @@ body{
     /* inherit line height of parent which is html */
     line-height: inherit;
     /* border: 1px solid red; */
+}
+
+h1{
+    /* design */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
 }
