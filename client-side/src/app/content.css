@@ -154,7 +154,7 @@
 /* LANDING SECTION */
 #landing-section{
   /* size */
-  min-height: 100vh;
+  min-height: 100dvh;
 
   /* display */
   display: flex;
@@ -221,13 +221,15 @@
   position: relative;
 
   /* size */
-  width: clamp(20rem, 25%, 30rem);
-  height: clamp(20rem, 25vw, 40rem);
+  width: clamp(15rem, 30vw, 30rem);
+  height: clamp(20rem, 30vw, 40rem);
 }
 
 .landing-card{
   /* position */
   position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
 
   /* design */
   /* outline: 1px solid slateblue; */
