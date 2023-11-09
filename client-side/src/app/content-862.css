@@ -150,14 +150,14 @@
         padding-bottom: .5em;
 
         /* size */
-        width: clamp(100px, 10vw, 10rem);
+        width: 10rem;
 
         /* design */
         text-align: center;
         color: black;
         font-size: 13px;
         font-weight: 300;
-        text-transform: capitalize;
+        text-transform: uppercase;
         text-decoration: none;
         cursor: pointer;
         /* outline: 3px solid lightgreen; */

@@ -12,8 +12,7 @@ function Cards(){
   return cards;
 }
 
-export default function Landing(){
-
+function Landing(){
   return (
     <Section section-name={"landing"}>
       <div className="slogan-container">
@@ -39,5 +38,24 @@ export default function Landing(){
         </div>
       </div>
     </Section>
+  );
+}
+
+function ProjectsOverview(){
+  return (
+    <Section section-name={"proj-ov"}>
+      <div className="header-container">
+        See our projects
+      </div>
+    </Section>
+  );
+}
+
+export default function Home(){
+  return (
+    <>
+      <Landing/>
+      <ProjectsOverview/>
+    </>
   );
 }
