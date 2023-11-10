@@ -10,7 +10,6 @@
 
         /* design */
         mix-blend-mode: difference;
-        background-color: transparent;
 
         /* transition */
         transition: top 0.25s cubic-bezier(0.5, 0, 0, 1);
@@ -69,7 +68,7 @@
         display: block; 
 
         /* design */
-        color: black;
+        color: white;
         font-size: clamp(24px, 2vw, 32px);
         font-family: 'Poppins', sans-serif;
         font-weight: 600;
@@ -95,8 +94,7 @@
         width: 1.75rem;
 
         /* design */
-        color: black;
-        background: transparent;
+        background-color: transparent;
         /* outline: 1px solid lightgreen; */
     }
 
@@ -197,15 +195,6 @@
     }
 
     /* MOBILE */
-    .button-container{
-        /* position */
-        position: relative;
-
-        /* design */
-        background-color: white;
-        /* outline: 1px solid red; */
-    }
-
     .button-container::before, .button-container::after{
         /* size */
         height: 2px;
@@ -217,7 +206,7 @@
         display: block;
 
         /* design */
-        background-color: black;
+        background-color: white;
         content: '';
     }
 
@@ -229,13 +218,16 @@
         width: 100%;
 
         /* transition */
-        transition: top 0.25s ease-in-out;
+        transition: 
+            top 0.25s ease-in-out,
+            transform 0.25s ease-in-out;
     }
 
     .button-container::after{
         /* position */
         bottom: 0%;
 
+        /* size */
         width: 50%;
 
         /* transition */
@@ -255,16 +247,22 @@
         width: 75%;
 
         /* design */
-        background-color: black;
+        background-color: white;
     }
 
     /* on click of button-container translate top and bottom of before and after bars */
     .button-container.opened::before{
+        background-color: black;
         top: 50%;
         transform: translateY(-50%);
     }
+
+    .button-container.opened .bar{
+        background-color: black;
+    }
     
     .button-container.opened::after{
+        background-color: black;
         bottom: 50%;
         transform: translateY(50%);
     }
