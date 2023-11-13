@@ -47,19 +47,19 @@
         </div>
     </div>
     <script>
-        // const $cards = document.querySelector('.cards');
+        const $cards = document.querySelector('.cards');
 
-        // if($cards) {
-        //     let i = 0;
-        //     setInterval(() => {
-        //         const active = i++ % 3 + 1;
-        //         $cards.setAttribute('data-active', active);
-        //         $cards.removeAttribute('data-current');
-        //         setTimeout(() => {
-        //             $cards.setAttribute('data-current', active);
-        //         }, 1000);
-        //     }, 3000);
-        // }
+        if($cards) {
+            let i = 0;
+            setInterval(() => {
+                const active = i++ % 3 + 1;
+                $cards.setAttribute('data-active', active);
+                $cards.removeAttribute('data-current');
+                setTimeout(() => {
+                    $cards.setAttribute('data-current', active);
+                }, 1000);
+            }, 3000);
+        }
     </script>
 </body>
 </html>

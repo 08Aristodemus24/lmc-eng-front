@@ -1,12 +1,34 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { Component, createRef } from "react";
 
+export default class CardStack extends Component{
+ constructor(props){
+  super(props);
+  this.state = {
+    time: Date.now()
+  };
+  this.idx = createRef(0);
+  this.activeIndex = createRef(3);
+  this.cards = createRef();
+ }
 
+ componentDidMount(){
+  
+ }
 
-export default function CardStack(){
-  let [i, setI] = useState(0);
-  let active = 3;
+ render(){
+  this.interval = setInterval(() => {
+    this.idx['current'] = this.idx['current'] + 1;
+    this.activeIndex['current'] = this.idx['current'] % 3 + 1;
+
+    this.cards.current.setAttribute('data-active', this.activeIndex['current']);
+    this.cards.current.removeAttribute('data-current');
+
+    setTimeout(() => {
+      this.cards.current.setAttribute('data-current', this.activeIndex['current']);
+    });
+  }, 3000);
 
   const card_arr = Array.from({length: 3}, (_, i) => i + 1).map((value, index) => {
     return (
@@ -26,11 +48,10 @@ export default function CardStack(){
     );
   });
 
-  const cards = useRef();
-
   return (
-    <div className="cards" data-active="3" data-current="3" ref={cards}>
+    <div className="cards" data-active="3" data-current="3" ref={this.cards}>
       {card_arr}
     </div>
   );
+ }
 }
