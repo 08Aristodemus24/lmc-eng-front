@@ -43,13 +43,12 @@ body {
 
   /* sizes */
   border: 1px dotted var(--color-chi);
-  min-width: 13rem;
-  min-height: 18rem;
+  min-width: 20rem;
+  min-height: 25rem;
   max-width: calc(100vww - 4rem);
 
   /* design */
   background-color: var(--color-beta);
-  border-radius: 0.2rem;
   outline: 3px solid green;
 
   /* position */
