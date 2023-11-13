@@ -1,0 +1,9 @@
+@media (width < 640px){
+    .cards{
+        order: 2;
+    }
+
+    .header-container{
+        order: 1;
+    }
+}

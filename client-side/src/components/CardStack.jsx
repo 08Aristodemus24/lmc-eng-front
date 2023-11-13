@@ -14,10 +14,6 @@ export default class CardStack extends Component{
  }
 
  componentDidMount(){
-  
- }
-
- render(){
   this.interval = setInterval(() => {
     this.idx['current'] = this.idx['current'] + 1;
     this.activeIndex['current'] = this.idx['current'] % 3 + 1;
@@ -27,8 +23,11 @@ export default class CardStack extends Component{
 
     setTimeout(() => {
       this.cards.current.setAttribute('data-current', this.activeIndex['current']);
-    });
-  }, 3000);
+    }, 1000);
+  }, 5000);
+ }
+
+ render(){
 
   const card_arr = Array.from({length: 3}, (_, i) => i + 1).map((value, index) => {
     return (
