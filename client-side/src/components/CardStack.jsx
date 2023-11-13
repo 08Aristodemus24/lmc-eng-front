@@ -28,20 +28,8 @@ export default function CardStack(){
 
   const cards = useRef();
 
-  useEffect(() => {
-    setInterval(() => {
-      setI((state) => state + 1);
-      active = i % 3 + 1;
-      cards.current.removeAttribute('data-current');
-      
-      setTimeout(() => {
-        cards.current.setAttribute('data-current', active);
-      }, 1000);
-    }, 3000)
-  }, []);
-
   return (
-    <div className="cards" data-active={active} data-current={active} ref={cards}>
+    <div className="cards" data-active="3" data-current="3" ref={cards}>
       {card_arr}
     </div>
   );
