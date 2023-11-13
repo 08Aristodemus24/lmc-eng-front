@@ -1,3 +1,4 @@
+import CardStack from "@/components/CardStack";
 import Section from "@/components/Section";
 
 function Landing(){
@@ -35,6 +36,7 @@ function ProjectsOverview(){
       <div className="header-container">
         See our projects
       </div>
+      <CardStack/>
     </Section>
   );
 }
