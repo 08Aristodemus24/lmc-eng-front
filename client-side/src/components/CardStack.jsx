@@ -5,26 +5,27 @@ import { Component, createRef } from "react";
 export default class CardStack extends Component{
  constructor(props){
   super(props);
-  this.state = {
-    time: Date.now()
-  };
-  this.idx = createRef(0);
-  this.activeIndex = createRef(3);
-  this.cards = createRef();
+  this.state = {};
+  this.activeIndex = createRef(1);
+  
  }
 
  componentDidMount(){
-  this.interval = setInterval(() => {
-    this.idx['current'] = this.idx['current'] + 1;
-    this.activeIndex['current'] = this.idx['current'] % 3 + 1;
+  // const cards = document.querySelector('.cards');
 
-    this.cards.current.setAttribute('data-active', this.activeIndex['current']);
-    this.cards.current.removeAttribute('data-current');
-
-    setTimeout(() => {
-      this.cards.current.setAttribute('data-current', this.activeIndex['current']);
-    }, 1000);
-  }, 5000);
+  // if(cards !== null){
+  //   let i = 0;
+  //   this.interval = setInterval(() => {
+  //     this.activeIndex['current'] = (i++ % 3) + 1;
+  
+  //     cards.setAttribute('data-active', this.activeIndex['current']);
+  //     cards.removeAttribute('data-current');
+  
+  //     setTimeout(() => {
+  //       cards.setAttribute('data-current', this.activeIndex['current']);
+  //     }, 1000);
+  //   }, 5000);
+  // }
  }
 
  render(){
@@ -48,7 +49,7 @@ export default class CardStack extends Component{
   });
 
   return (
-    <div className="cards" data-active="3" data-current="3" ref={this.cards}>
+    <div className="cards" data-active="1" data-current="1" ref={this.cards}>
       {card_arr}
     </div>
   );
