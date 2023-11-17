@@ -335,7 +335,7 @@
   /* sizes */
   min-width: 20rem;
   min-height: 25rem;
-  max-width: calc(100vww - 4rem);
+  max-width: calc(100vw - 4rem);
 
   /* position */
   position: relative;
