@@ -32,14 +32,12 @@ body {
   padding: 0.5rem 2rem 1.5rem 1rem;
 
   /* sizes */
-  border: 1px dotted var(--color-chi);
+  outline: 1px solid black;
   min-width: 20rem;
   min-height: 25rem;
-  max-width: calc(100vww - 4rem);
 
   /* design */
   background-color: #fac2d42f;
-  outline: 3px solid green;
   opacity: 0%;
 
   /* position */
