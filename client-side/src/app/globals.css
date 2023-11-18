@@ -42,6 +42,11 @@ body{
     /* border: 1px solid red; */
 }
 
+body > main > div{
+    background-color: white;
+    min-height: 100vh;
+}
+
 h1{
     /* design */
     font-family: 'Poppins', sans-serif;

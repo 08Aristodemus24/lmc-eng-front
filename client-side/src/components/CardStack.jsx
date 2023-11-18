@@ -16,7 +16,7 @@ export default class CardStack extends Component{
   if(cards !== null){
     let i = 0;
     this.interval = setInterval(() => {
-      this.activeIndex['current'] = (i++ % 6) + 1;
+      this.activeIndex['current'] = (i++ % 3) + 1;
   
       cards.setAttribute('data-active', this.activeIndex['current']);
       cards.removeAttribute('data-current');
@@ -37,11 +37,7 @@ export default class CardStack extends Component{
           <h2>{value}</h2>
         </div>
         <div className="card-content">
-          <ul>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-          </ul>
+          project {value}
         </div>
         <img className="card-background" src={`/compressed/portrait-stocks (${value}).jpg`} alt={`stock-image ${value}`}/>
       </div>
@@ -49,7 +45,7 @@ export default class CardStack extends Component{
   });
 
   return (
-    <div className="cards" data-active="1" data-current="1" ref={this.cards}>
+    <div className="cards" data-active="3" data-current="3" ref={this.cards}>
       {card_arr}
     </div>
   );
