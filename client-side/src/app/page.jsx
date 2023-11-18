@@ -34,7 +34,8 @@ function ProjectsOverview(){
   return (
     <Section section-name={"proj-ov"}>
       <div className="header-container">
-        See our projects
+        <h1>See our projects</h1>
+        <button>View more</button>
       </div>
       <CardStack/>
     </Section>

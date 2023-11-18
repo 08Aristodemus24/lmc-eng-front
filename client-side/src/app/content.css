@@ -298,16 +298,52 @@
 }
 
 .header-container{
+  /* display */
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+
+  /* position */
+  order: 2;
+}
+
+.header-container h1{
   /* design */
   font-size: clamp(1.5rem, 3.75vw, 3.75rem);
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
   /* outline: 1px solid black; */
-
-  /* display */
-  order: 2;
 }
 
+.header-container button{
+  /* display */
+  display: block;
+  align-self: flex-start;
+
+  /* design */
+  outline: 1px solid black;
+  background-color: transparent;
+  font-size: clamp(12px, 1vw, 1rem);
+  border: none;
+  color: black;
+  text-align: center;
+  cursor: pointer;
+
+  /* size */
+  padding-inline: 1em;
+  padding-block: 0.5em;
+
+  /* transition */
+  transition: 
+    background-color 0.25s ease-in-out,
+    color 0.25s ease-in-out;
+}
+
+.header-container button:hover{
+  /* design */
+  background-color: black;
+  color: white;
+}
 
 
 /* card stack */
