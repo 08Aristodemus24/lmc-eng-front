@@ -30,7 +30,7 @@ export default class CardStack extends Component{
 
  render(){
 
-  const card_arr = Array.from({length: 6}, (_, i) => i + 1).map((value, index) => {
+  const card_arr = Array.from({length: 3}, (_, i) => i + 1).map((value, index) => {
     return (
       <div className="card" key={index}>
         <div className="card-headers">

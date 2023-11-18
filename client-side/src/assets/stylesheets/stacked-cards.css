@@ -29,7 +29,7 @@ body {
   /* spacing */
   /* top right bottom left */
   margin: 4rem 4rem 0 0;
-  padding: 0.5rem 2rem 1.5rem 1rem;
+  padding: 1rem;
 
   /* sizes */
   outline: 1px solid black;

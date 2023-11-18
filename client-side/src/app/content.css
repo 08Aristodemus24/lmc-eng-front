@@ -329,7 +329,7 @@
   /* spacing */
   /* it is imperative the translation values match the values 
   of the margin which is 4rem in order to keep track of space left */
-  margin: 10rem 10rem 0 0;
+  margin: 4rem 4rem 0 0;
   padding: 1rem; 
 
   /* sizes */
@@ -408,10 +408,7 @@ first card is active and we want to move the other
 cards specifically card 2 to the left, and 2rem up */
 [data-active="1"] .card:not(:nth-of-type(1)), 
 [data-active="2"] .card:not(:nth-of-type(2)), 
-[data-active="3"] .card:not(:nth-of-type(3)),
-[data-active="4"] .card:not(:nth-of-type(4)),
-[data-active="5"] .card:not(:nth-of-type(5)),
-[data-active="6"] .card:not(:nth-of-type(6)){
+[data-active="3"] .card:not(:nth-of-type(3)){
   position: absolute;
   inset: 0;
 }
@@ -419,13 +416,10 @@ cards specifically card 2 to the left, and 2rem up */
 /* and any card that is active will receive the higher z-index in order to be seen */
 [data-active="1"] .card:nth-of-type(1),
 [data-active="2"] .card:nth-of-type(2),
-[data-active="3"] .card:nth-of-type(3),
-[data-active="4"] .card:nth-of-type(4),
-[data-active="5"] .card:nth-of-type(5),
-[data-active="6"] .card:nth-of-type(6){
+[data-active="3"] .card:nth-of-type(3){
   /* position of the active card in the z-index
   will always be higher */
-  z-index: 6;
+  z-index: 3;
 
   /* design */
   opacity: 100%;
@@ -435,38 +429,15 @@ cards specifically card 2 to the left, and 2rem up */
 card 2 at the back 2rem to the left and -2rem up */
 [data-active="1"] .card:nth-of-type(2){
   transform: translate(2rem, -2rem);
-  z-index: 5;
-
-  /* design */
-  opacity: 100%;
-}
-
-[data-current="1"] .card:nth-of-type(3){
-  transform: translate(4rem, -4rem);
-  z-index: 4;
-
-  /* design */
-  opacity: 100%;
-}
-
-[data-active="1"] .card:nth-of-type(4){
-  transform: translate(6rem, -6rem);
-  z-index: 3;
-
-  /* design */
-  opacity: 100%;
-}
-
-[data-current="1"] .card:nth-of-type(5){
-  transform: translate(8rem, -8rem);
   z-index: 2;
 
   /* design */
   opacity: 100%;
 }
 
-[data-active="1"] .card:nth-of-type(6){
-  transform: translate(10rem, -10rem);
+[data-current="1"] .card:nth-of-type(3){
+  /* position */
+  transform: translate(4rem, -4rem);
   z-index: 1;
 
   /* design */
@@ -476,6 +447,7 @@ card 2 at the back 2rem to the left and -2rem up */
 /* when card 2 is active or in front, translate
 card 3 at the back 2rem to the left and -2rem up */
 [data-active="2"] .card:nth-of-type(3){
+  /* position */
   transform: translate(2rem, -2rem);
   z-index: 2;
 
@@ -507,58 +479,6 @@ card 3 at the back 2rem to the left and -2rem up */
   opacity: 100%;
 }
 
-[data-active="1"] .card:nth-of-type(2){
-  transform: translate(2rem, -2rem);
-  z-index: 2;
 
-  /* design */
-  opacity: 100%;
-}
-
-/* when card 1 is active or in front translate
-card 3 at the back 4rem to the left and -4rem up */
-[data-current="1"] .card:nth-of-type(3){
-  transform: translate(4rem, -4rem);
-  z-index: 1;
-
-  /* design */
-  opacity: 100%;
-}
-
-[data-active="1"] .card:nth-of-type(2){
-  transform: translate(2rem, -2rem);
-  z-index: 2;
-
-  /* design */
-  opacity: 100%;
-}
-
-/* when card 1 is active or in front translate
-card 3 at the back 4rem to the left and -4rem up */
-[data-current="1"] .card:nth-of-type(3){
-  transform: translate(4rem, -4rem);
-  z-index: 1;
-
-  /* design */
-  opacity: 100%;
-}
-
-[data-active="1"] .card:nth-of-type(2){
-  transform: translate(2rem, -2rem);
-  z-index: 2;
-
-  /* design */
-  opacity: 100%;
-}
-
-/* when card 1 is active or in front translate
-card 3 at the back 4rem to the left and -4rem up */
-[data-current="1"] .card:nth-of-type(3){
-  transform: translate(4rem, -4rem);
-  z-index: 1;
-
-  /* design */
-  opacity: 100%;
-}
 /* FOOTER */
 
