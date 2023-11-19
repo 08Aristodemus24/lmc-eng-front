@@ -265,7 +265,7 @@
 
 
 
-/* PROJECTS OVERVIEW SECTIOn */
+/* PROJECTS OVERVIEW SECTION */
 #proj-ov-section{
   /* size */
   min-height: 100vh;
@@ -288,7 +288,8 @@
 
   /* spacing */
   margin-inline: 1rem;
-  gap: 5rem;
+  column-gap: 12rem;
+  row-gap: 5rem;
 
   /* size */
   width: 100%;
@@ -297,7 +298,7 @@
   /* outline: 1px solid seagreen; */
 }
 
-.header-container{
+.proj-ov-content .header-container{
   /* display */
   display: flex;
   flex-direction: column;
@@ -390,26 +391,84 @@
     z-index 1s 0.5s ease-in-out;
 }
 
-.card::before{
+.card::after{
   /* design */
   content: '';
 
   /* position */
   position: absolute;
   inset: 0;
+  z-index: -1;
 
   /* transition */
   transition: background-color 0.25s ease-in-out;
 }
 
-.card:hover::before{
+.card:hover::after{
   /* design */
   background-color: rgba(0, 0, 0, 0.356);
 }
 
 /* rest of these are just text for the card which you can arrange */
-.card h2 {
+.card .card-headers{
+  /* design */
+  opacity: 0%;
+  visibility: hidden;
+
+  /* display */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  row-gap: 1.5rem;
+
+  transition: 
+    opacity 0.25s ease-in-out,
+    visibility 0.25s ease-in-out;
+}
+
+.card-headers h2{
+  /* design */
+  color: white;
+  font-size: clamp(14px, 2.1875vw, 22.4px);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.card-headers button{
+  /* display */
+  display: block;
+  align-self: flex-start;
+
+  /* design */
+  outline: 1px solid white;
+  background-color: transparent;
+  font-size: clamp(12px, 1vw, 1rem);
+  border: none;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+
+  /* size */
+  padding-inline: 1em;
+  padding-block: 0.5em;
+
+  /* transition */
+  transition: 
+    background-color 0.25s ease-in-out,
+    color 0.25s ease-in-out;
+}
+
+.card-headers button:hover{
+  /* design */
+  background-color: white;
   color: black;
+}
+
+.card:hover .card-headers{
+  /* design */
+  opacity: 100%;
+  visibility: visible;
 }
 
 .card .card-background{
@@ -502,6 +561,69 @@ card 3 at the back 2rem to the left and -2rem up */
   opacity: 100%;
 }
 
+
+
+/* SERVICES OVERVIEW SECTION */
+#services-ov-section{
+  /* size */
+  min-height: 100vh;
+
+  /* design */
+  background-color: white;
+
+  /* display */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.services-ov-content{
+  /* display */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+
+  /* spacing */
+  margin-inline: 1rem;
+  column-gap: 12rem;
+  row-gap: 5rem;
+
+  /* size */
+  width: 100%;
+
+  /* design */
+  /* outline: 1px solid seagreen; */
+}
+
+.services-ov-content .header-container{
+
+}
+
+.tiles-container{
+  /* display: grid;
+  grid-template-columns: repeat(au); */
+}
+
+.tile{
+  /* size */
+  width: 10rem;
+  height: 10rem;
+
+  /* design */
+  outline: 1px solid black;
+  transform: rotate(45deg);
+
+  /* position */
+  position: relative;
+}
+
+.tile span{
+  position: absolute;
+  inset: 0;
+
+  transform: rotate(-45deg);
+}
 
 /* FOOTER */
 

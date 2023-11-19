@@ -1,5 +1,8 @@
 import CardStack from "@/components/CardStack";
+import Header from "@/components/Header";
 import Section from "@/components/Section";
+import Tiles from "@/components/Tiles";
+
 
 function Landing(){
   return (
@@ -31,13 +34,21 @@ function Landing(){
 }
 
 function ProjectsOverview(){
+
   return (
     <Section section-name={"proj-ov"}>
-      <div className="header-container">
-        <h1>See our projects</h1>
-        <button>View more</button>
-      </div>
+      <Header dest-page={"projects"} header={"See our projects"}/>
       <CardStack/>
+    </Section>
+  );
+}
+
+function ServicesOverview(){
+
+  return (
+    <Section section-name={"services-ov"}>
+      <Header dest-page={"services"} header={"Services we offer"}/>
+      <Tiles/>
     </Section>
   );
 }
@@ -47,6 +58,7 @@ export default function Home(){
     <>
       <Landing/>
       <ProjectsOverview/>
+      <ServicesOverview/>
     </>
   );
 }

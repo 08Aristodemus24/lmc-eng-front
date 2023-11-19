@@ -1,6 +1,7 @@
-@media (width < 640px){
+@media (width < 768px){
     .cards{
         order: 2;
+        /* background-color: aquamarine; */
     }
 
     .header-container{

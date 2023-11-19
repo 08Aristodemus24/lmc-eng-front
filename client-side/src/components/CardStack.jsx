@@ -29,17 +29,16 @@ export default class CardStack extends Component{
  }
 
  render(){
+  const card_names = ['Home Rennovation', 'Project 2', 'Project 3'];
 
-  const card_arr = Array.from({length: 3}, (_, i) => i + 1).map((value, index) => {
+  const card_arr = card_names.map((value, index) => {
     return (
       <div className="card" key={index}>
         <div className="card-headers">
           <h2>{value}</h2>
+          <button>View project</button>
         </div>
-        <div className="card-content">
-          project {value}
-        </div>
-        <img className="card-background" src={`/compressed/portrait-stocks (${value}).jpg`} alt={`stock-image ${value}`}/>
+        <img className="card-background" src={`/compressed/portrait-stocks (${index + 1}).jpg`} alt={`stock-image ${index + 1}`}/>
       </div>
     );
   });
