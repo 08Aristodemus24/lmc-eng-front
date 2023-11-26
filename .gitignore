@@ -34,3 +34,6 @@
 # typescript
 /client-side/*.tsbuildinfo
 /client-side/next-env.d.ts
+
+
+/server-side/.env

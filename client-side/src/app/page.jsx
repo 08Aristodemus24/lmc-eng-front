@@ -3,6 +3,8 @@ import Header from "@/components/Header";
 import Section from "@/components/Section";
 import Tiles from "@/components/Tiles";
 
+import Image from "next/image";
+
 
 function Landing(){
   return (
@@ -20,13 +22,13 @@ function Landing(){
             Founded with the passion of its founder and
             inspired by years of engineering practice, LMC
             Engineering Front (LMC-EF) carries on the vision,
-            representing the next generation of the family's
+            representing the next generation of the family&apos;s
             line in Engineering and Architecture.
         </p>
       </div>
       <div className="stack-container">
         <div className="landing-card">
-          <img src="/compressed/AIified stock photo (3).jpg" alt="stock-image"/>
+          <Image width={1000} height={1000} src="/compressed/AIified stock photo (3).jpg" alt="stock-image"/>
         </div>
       </div>
     </Section>

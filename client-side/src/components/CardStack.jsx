@@ -1,6 +1,7 @@
 "use client";
 
 import { Component, createRef } from "react";
+import Image from "next/image";
 
 export default class CardStack extends Component{
  constructor(props){
@@ -38,7 +39,7 @@ export default class CardStack extends Component{
           <h2>{value}</h2>
           <button>View project</button>
         </div>
-        <img className="card-background" src={`/compressed/portrait-stocks (${index + 1}).jpg`} alt={`stock-image ${index + 1}`}/>
+        <Image height={500} width={500} className="card-background" src={`/compressed/portrait-stocks (${index + 1}).jpg`} alt={`stock-image ${index + 1}`}/>
       </div>
     );
   });
