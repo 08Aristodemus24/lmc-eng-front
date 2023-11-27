@@ -221,3 +221,9 @@ for doing the latter would be a taxing thing to do. An alternative would be to u
 ```
 
 2. implement transition between pages
+
+## Writing diamond grid layout
+**To do:**
+
+**Articles:**
+1. responsive diamopnd grid layout: https://medium.com/@supryan/who-needs-squares-and-rectangles-how-to-create-a-diamond-grid-layout-with-css-da5712d6df8b

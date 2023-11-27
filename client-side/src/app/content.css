@@ -601,8 +601,7 @@ card 3 at the back 2rem to the left and -2rem up */
 }
 
 .tiles-container{
-  /* display: grid;
-  grid-template-columns: repeat(au); */
+  
 }
 
 .tile{
@@ -616,12 +615,23 @@ card 3 at the back 2rem to the left and -2rem up */
 
   /* position */
   position: relative;
+  margin: -40px;
 }
 
-.tile span{
+.tile:nth-child(even){
+  right: 150%;
+}
+
+.tile .content{
+  /* position */
   position: absolute;
   inset: 0;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* design */
   transform: rotate(-45deg);
 }
 

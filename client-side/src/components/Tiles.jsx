@@ -6,7 +6,9 @@ export default function Tiles(){
     const tile_arr = tile_names.map((value, index) => {
         return (
             <div className="tile" key={index}>
-                <span>{value}</span>
+                <div className="content">
+                    <span>{value}</span>
+                </div>
             </div>
         );
     })
