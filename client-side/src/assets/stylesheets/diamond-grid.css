@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+}
+
+.grid {
+    /* Square root of 2 is a constant */
+    --sqrt: 1.41421356237;
+
+    /* Divide by number of "columns" */
+    --grid-unit: calc(100vw / 5);
+    --transform-unit: calc(var(--grid-unit) / var(--sqrt));
+    --unit: calc(var(--transform-unit) * 2);
+}
+
+.layout {
+    height: var(--grid-unit);
+    position: relative;
+}
+
+/* odd items */
+.layout:nth-child(odd) .item:first-child {
+    left: var(--grid-unit);
+}
+.layout:nth-child(odd) .item:last-child:not(:first-child) {
+    left: calc(var(--grid-unit) * 3);
+}
+
+/* even items */
+.layout:nth-child(even) .item:first-child {
+    left: calc(var(--grid-unit) * 2);
+}
+.layout:nth-child(even) .item:last-child {
+    left: calc(var(--grid-unit) * 4);
+}
+
+.item {
+    background: gray;
+    height: calc(var(--unit) + 1px);
+    left: 0;
+
+    /* Let border create the grid gaps */
+    border: 2vw solid white;
+    pointer-events: auto;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+
+    /* Rotate items */
+    transform: rotate(45deg) translateZ(0);
+    transform-origin: 0% 0%;
+    width: calc(var(--unit) + 1px);
+    z-index: 1;
+}
+
+.content {
+    height: var(--unit);
+    width: var(--unit);
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+.content > * {
+    /* Rotate content 45deg counter clockwise */
+    transform: scale(1.5) rotate(-45deg);
+}
+.content img {
+    height: 100%;
+    left: 0;
+    object-fit: cover;
+    object-position: center center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    pointer-events: none;
+    user-select: none;
+}
+
+/*# sourceMappingURL=diamond-grid.css.map */

@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .grid {
+    --sqrt: 1.41421356237; // Square root of 2 is a constant
+    --grid-unit: calc(100vw / 5); // Divide by number of "columns"
+    --transform-unit: calc(var(--grid-unit) / var(--sqrt));
+    --unit: calc(var(--transform-unit) * 2);
+  }
+  
+  .layout {
+    height: var(--grid-unit);
+    position: relative;
+    
+    // Odd rows
+    &:nth-child(odd) {
+      .item {
+        &:first-child {
+          left: var(--grid-unit);
+        }
+  
+        &:last-child:not(:first-child) {
+          left: calc(var(--grid-unit) * 3);
+        }
+      }
+    }
+  
+    // Even rows
+    &:nth-child(even) {
+      .item {
+        &:first-child {
+            left: calc(var(--grid-unit) * 2);
+         }
+  
+         &:last-child {
+            left: calc(var(--grid-unit) * 4);
+         }
+      }
+    }
+  }
+  
+  .item {
+    background: gray;
+    height: calc(var(--unit) + 1px);
+    left: 0;
+    border: 2vw solid white; // Let border create the grid gaps
+    pointer-events: auto;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    transform: rotate(45deg) translateZ(0); // Rotate items
+    transform-origin: 0% 0%;
+    width: calc(var(--unit) + 1px);
+    z-index: 1;
+  }
+  
+  .content {
+    height: var(--unit);
+    width: var(--unit);
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    
+    // Rotate content 45deg counter clockwise
+    > * {
+      transform: scale(1.5) rotate(-45deg);
+    }
+  
+    img {
+      height: 100%;
+      left: 0;
+      object-fit: cover;
+      object-position: center center;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      pointer-events: none;
+      user-select: none;
+    }
+  }
+  
