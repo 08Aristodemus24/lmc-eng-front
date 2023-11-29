@@ -3,53 +3,85 @@
 }
 
 .grid {
+    outline: 1px solid blueviolet;
+
     /* Square root of 2 is a constant */
     --sqrt: 1.41421356237;
 
     /* Divide by number of "columns" */
-    --grid-unit: calc(100vw / 5);
+    --grid-unit: calc(50vw / 2);
     --transform-unit: calc(var(--grid-unit) / var(--sqrt));
-    --unit: calc(var(--transform-unit) * 2);
+    --unit: calc(var(--transform-unit));
 }
 
 .layout {
-    height: var(--grid-unit);
+    /* design */
+    outline: 1px solid salmon;
+
+    /* size */
+    height: calc(var(--grid-unit) * 0.5);
+
+    /* position */
     position: relative;
 }
 
 /* odd items */
 .layout:nth-child(odd) .item:first-child {
-    left: var(--grid-unit);
+    /* design */
+    /* outline: 1px solid green; */
+
+    /* position */
+    left: calc(var(--grid-unit) * -0.5);
 }
 .layout:nth-child(odd) .item:last-child:not(:first-child) {
-    left: calc(var(--grid-unit) * 3);
+    /* design */
+    /* outline: 1px solid gold; */
+
+    /* position */
+    /* left: calc(var(--grid-unit) * 3); */
 }
 
 /* even items */
 .layout:nth-child(even) .item:first-child {
-    left: calc(var(--grid-unit) * 2);
+    /* design */
+    /* outline: 1px solid slateblue; */
+
+    /* position */
+    /* left: calc(var(--grid-unit) * 2); */
 }
 .layout:nth-child(even) .item:last-child {
-    left: calc(var(--grid-unit) * 4);
+    /* design */
+    /* outline: 1px solid saddlebrown; */
+
+    /* position */
+    left: calc(var(--grid-unit) * 0.5);
 }
 
 .item {
-    background: gray;
     height: calc(var(--unit) + 1px);
-    left: 0;
+    width: calc(var(--unit) + 1px);
+    /* height: clamp(3.5rem, 6.5vw, 6.5rem);
+    width: clamp(3.5rem, 6.5vw, 6.5rem); */
+
+    /* position */
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    z-index: 1;
 
     /* Let border create the grid gaps */
-    border: 2vw solid white;
+    border: 2px solid transparent;
     pointer-events: auto;
-    overflow: hidden;
-    position: absolute;
-    top: 0;
 
+    /* containment */
+    overflow: hidden;
+
+    /* design */
+    /* outline: 3px solid black; */
     /* Rotate items */
     transform: rotate(45deg) translateZ(0);
-    transform-origin: 0% 0%;
-    width: calc(var(--unit) + 1px);
-    z-index: 1;
+    /* transform: rotate(45deg); */
+    /* transform-origin: 0% 0%; */
 }
 
 .content {
