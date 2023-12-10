@@ -215,7 +215,7 @@ routes
      |- +page.svelte
 ```
 
-for doing the latter would be a taxing thing to do. An alternative would be to use [...slug] as our parameter in a folder containing a +page.svelte file that will catch all our routes
+for doing the latter would be a taxing thing to do. An alternative would be to use [...slug] as our parameter in a folder containing a +page.svelte file that will catch all our routes and can be accessed through the parameters of our page function through { params: my_params } -> my_params.slug which will return an array of all the url patterns separated by forward slashes
 ```
 
 ```
@@ -227,3 +227,10 @@ for doing the latter would be a taxing thing to do. An alternative would be to u
 
 **Articles:**
 1. responsive diamopnd grid layout: https://medium.com/@supryan/who-needs-squares-and-rectangles-how-to-create-a-diamond-grid-layout-with-css-da5712d6df8b
+
+
+# Deployment
+**To do:**
+
+**Insights:**
+1. npm run build is only for creating a local production version of your next.js app what makes deleting this local folder and instead deploying it to let's say vercel is that vercel automatically runs this npm run build command automatically and builds and deploys it on the web itself. Thus the .next folder will not be creawted by you locally but will be done by vercel itself
