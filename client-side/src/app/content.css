@@ -597,29 +597,96 @@ card 3 at the back 2rem to the left and -2rem up */
 }
 
 .services-ov-content .header-container{
-
+  /* display */
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
 }
 
 .tiles-container{
-  
+  /* Square root of 2 is a constant */
+  --sqrt: 1.41421356237;
+
+  /* divide by number of "columns" since we only 
+  have 2 columns we use 2 as the denominator */
+  --grid-unit: calc(25vw / 2);
+  --transform-unit: calc(var(--grid-unit) / var(--sqrt));
+  --unit: calc(var(--transform-unit));
+
+  /* display */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  /* size */
+  width: calc(clamp(15rem, 30vw, 30rem));
+  height: calc(clamp(20rem, 30vw, 40rem));
+
+  /* design */
+  /* outline: 1px solid blueviolet; */ 
+}
+
+.layout{
+  /* size */
+  height: calc(var(--grid-unit) * 0.5);
+
+  /* position */
+  position: relative;
+
+  /* spacing */
+  margin-block: 0.25rem;
+
+  /* design */
+  /* outline: 1px solid salmon; */
 }
 
 .tile{
   /* size */
-  width: 10rem;
-  height: 10rem;
-
-  /* design */
-  outline: 1px solid black;
-  transform: rotate(45deg);
+  height: calc(var(--unit) + 1px);
+  width: calc(var(--unit) + 1px);
 
   /* position */
-  position: relative;
-  margin: -40px;
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  z-index: 1;
+
+  /* design */
+  /* Let border create the grid gaps */
+  outline: 1px solid black;
+  border: 2px solid transparent;
+  cursor: pointer;
+  pointer-events: auto;
+
+  /* containment */
+  overflow: hidden;
+
+  /* design */
+  /* rotate items */
+  transform: rotate(45deg) translateZ(0);
+  
+  /* transition */
+  transition: background-color 0.25s ease-in-out;
 }
 
-.tile:nth-child(even){
-  right: 150%;
+.layout:nth-child(odd) .tile:first-child {
+  /* design */
+  /* outline: 1px solid green; */
+
+  /* position */
+  right: calc(var(--grid-unit) * 0.53);
+}
+
+.layout:nth-child(even) .tile:last-child {
+  /* design */
+  /* outline: 1px solid saddlebrown; */
+
+  /* position */
+  left: calc(var(--grid-unit) * 0.53);
+}
+
+.tile:hover{
+  background-color: black;
 }
 
 .tile .content{
@@ -627,12 +694,27 @@ card 3 at the back 2rem to the left and -2rem up */
   position: absolute;
   inset: 0;
 
+  /* display */
   display: flex;
   justify-content: center;
   align-items: center;
 
   /* design */
   transform: rotate(-45deg);
+}
+
+.content span{
+  /* design */
+  font-weight: 200;
+  text-align: justify;
+  font-size: clamp(12px, 1vw, 1rem);
+
+  /* transition */
+  transition: color 0.25s ease-in-out;
+}
+
+.tile:hover .content span{
+  color: white;
 }
 
 /* FOOTER */
