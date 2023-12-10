@@ -4,11 +4,11 @@ export default function Projects(){
     )
 }
 
-export async function getStaticProps(){
-    // this function will return all the projects from the backend
-    // return {
-    //     props: {
-    //         projects: data
-    //     }
-    // }
-}
+// export async function getStaticProps(){
+//     // this function will return all the projects from the backend
+//     return {
+//         props: {
+//             projects: data
+//         }
+//     }
+// }
