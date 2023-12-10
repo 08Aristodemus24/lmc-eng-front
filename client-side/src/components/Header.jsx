@@ -13,6 +13,6 @@ export default function Header({ 'dest-page': page, 'header': header }){
 
                 router.push(`/${page}`);
             }}>View more</button>
-      </div>
+        </div>
     );
 }

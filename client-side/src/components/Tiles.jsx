@@ -11,7 +11,7 @@ export default function Tiles(){
             <div key={index} className="layout" onClick={() => {
                 router.push(`/services/${value}`);
             }}>
-                <div className="tile" key={index}>
+                <div className="tile">
                     <div className="content">
                         <span>{value}</span>
                     </div>
