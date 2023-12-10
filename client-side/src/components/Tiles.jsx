@@ -8,7 +8,7 @@ export default function Tiles(){
 
     const tile_arr = tile_names.map((value, index) => {
         return (
-            <div className="layout" onClick={() => {
+            <div key={index} className="layout" onClick={() => {
                 router.push(`/services/${value}`);
             }}>
                 <div className="tile" key={index}>
